@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Thermometer</title>
+    <script src="https://use.fontawesome.com/67bb2623ba.js"></script>
+    <link rel="shortcut icon" href="thermometer.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #30356E;
+            height: 100vh;
+
+        }
+
+        .box {
+            color: white
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .box {
+            text-align: center;
+        }
+
+        .fa {
+            font-size: 200px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Hello friends Bukhar check Kar lo</h1>
+
+            <h1 class="fa" id="therma"></h1>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        let therma = document.getElementById('therma');
+        const tempLoad = () => {
+            therma.innerHTML = "&#xf2cb";
+            therma.style.color = "#f8b627";
+
+            setTimeout(() => {
+                therma.innerHTML = "&#xf2ca";
+            }, 1000);
+            setTimeout(() => {
+                therma.innerHTML = "&#xf2c9";
+            }, 2000);
+            setTimeout(() => {
+                therma.innerHTML = "&#xf2c8";
+            }, 3000);
+            setTimeout(() => {
+                therma.innerHTML = "&#xf2c7";
+                therma.style.color = "#d63031"
+
+            }, 4000);
+        }
+
+        tempLoad()
+        setInterval(tempLoad, 5000);
+    </script>
+</body>
+
+</html>
